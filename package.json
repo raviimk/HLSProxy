@@ -1,34 +1,15 @@
 {
-  "name": "@warren-bank/hls-proxy",
-  "description": "Node.js server to proxy HLS video streams",
-  "version":     "3.6.6",
+  "name": "hls-proxy",
+  "version": "1.0.0",
+  "description": "Simple HLS Proxy for live stream",
+  "main": "server.js",
   "scripts": {
-    "start":     "node hls-proxy/bin/hlsd.js",
-    "sudo": "sudo node hls-proxy/bin/hlsd.js"
-  },
-  "bin": {
-    "hlsd": "hls-proxy/bin/hlsd.js"
+    "start": "npx @warren-bank/hls-proxy --port $PORT --target \"https://plu001.myturn1.top:8088/live/webcrichindi/playlist.m3u8?vidictid=205474799473&id=119771&pk=b8522cf8e97336b762c8b9761a52c0d68f3d92020de5e3a97f648f3f12711144ab4e503d360532b216fc37acf43f56a5549ccfbb520e354c6eca6b94ad4516a9\""
   },
   "dependencies": {
-    "@warren-bank/node-process-argv": "^1.2.1",
-    "@warren-bank/node-request": "^2.0.12",
-    "@warren-bank/url": "^3.1.2",
-    "hpagent": "^1.2.0",
-    "regexp-match-indices": "^1.0.2",
-    "tough-cookie": "^3.0.1"
+    "@warren-bank/hls-proxy": "^3.6.6"
   },
-  "license": "GPL-2.0",
-  "author": {
-    "name":   "Warren R. Bank",
-    "email":  "warren.r.bank@gmail.com",
-    "url":    "https://github.com/warren-bank"
-  },
-  "homepage": "https://github.com/warren-bank/node-HLS-Proxy",
-  "repository": {
-    "type":   "git",
-    "url":    "https://github.com/warren-bank/node-HLS-Proxy"
-  },
-  "bugs": {
-    "url":    "https://github.com/warren-bank/node-HLS-Proxy/issues"
+  "engines": {
+    "node": ">=18"
   }
 }
